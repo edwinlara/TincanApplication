@@ -230,7 +230,7 @@ module.exports = function (grunt) {
           },
           pages: {
             options: {
-              remote: 'PASTE HERE',
+              remote: 'https://github.com/edwinlara/TincanApplication.git',
               branch: 'gh-pages'
             }
           },
