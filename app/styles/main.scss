@@ -1,5 +1,5 @@
 /*****************************************************************************
-  tincan
+  Tincan
 ******************************************************************************/
 
 
@@ -15,7 +15,9 @@
 ******************************************************************************/
 
 body {
+
   background: #F7F7F7;
+
 }
 
 
@@ -25,17 +27,16 @@ body {
 
 //*NAVIGATION*//
 
-
 header.navigation {
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $action-color: #477DCA !default;
-  $dark-gray: transparentize(#00B4FF, 0.10) !default;
+  $dark-gray: transparentize(#00B4FF, 0.0) !default;
   $large-screen: em(860) !default;
   $navigation-padding: 1em;
   $navigation-background: $dark-gray;
   $navigation-color: transparentize(#FFF, 0);
-  $navigation-color-hover: #F7F7F7;
+  $navigation-color-hover: #EAEAEA;
   $navigation-height: 60px;
   $navigation-nav-button-background: $action-color;
   $navigation-nav-button-background-hover: lighten($navigation-background, 10%);
@@ -46,10 +47,10 @@ header.navigation {
   $navigation-submenu-padding: 1em;
   $navigation-submenu-width: 12em;
   $horizontal-bar-mode: $large-screen;
-  position: fixed;
+  position: absolute;
 
   background-color: $navigation-background;
-  border-bottom: 1px solid darken($navigation-background, 4);
+  border-bottom: 2px solid darken($navigation-background, 8);
   min-height: $navigation-height;
   width: 100%;
   z-index: 999;
@@ -143,7 +144,7 @@ header.navigation {
     text-align: right;
     width: 100%;
     z-index: 9999;
-    font-family: "Helvetica", "Arial";
+    font-family: Helvetica, Arial;
 
 
     @include media ($horizontal-bar-mode) {
@@ -314,13 +315,16 @@ header.navigation {
     @include button(flat, #FFB400);
     display: inline;
     float: right;
-    font-size: 0.8em;
     margin-top: 1em;
     padding: 0.75em 2em;
     text-transform: none;
-    font-family: "Helvetica", "Arial";
+    border: 1px solid #E6A200;
+    font-size: 0.8em;
+    font-family: Helvetica, Arial;
     font-weight: 300;
+    letter-spacing: 0.5px;
     color: #FFF;
+
   }
 
   
@@ -385,6 +389,7 @@ header.navigation {
     }
   }
 }
+
 //*NAVIGATION*//
 
 //*HERO*//
@@ -401,8 +406,8 @@ header.navigation {
 //raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
 
   background: linear-gradient(
-    rgba(0,180,255, 0.6), 
-    rgba(0,180,255, 0.8)
+    rgba(0,0,0, 0.2), 
+    rgba(0,0,0, 0.6)
     ), url("../images/SavingWoman.jpg");
 
   @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
@@ -413,18 +418,18 @@ header.navigation {
   padding-bottom: 3em;
 
   .hero-logo img {
-    height: 6.9em;
-    margin-bottom: 0.2em;
+    height: 6.8em;
     margin-top: 6.6em;
+    margin-bottom: 0.0em;
 
   }
 
   u {
+    display: inline-block;
     color: #FFF;
     text-decoration: none;
-    border-bottom: 2px solid #0C613A;
+    border-bottom: 0px solid #FFF;
     padding-bottom: 0.1px;
-    display: inline-block; 
 
   }
 
@@ -450,14 +455,14 @@ header.navigation {
       }
 
       p {
-        font-weight: 200;
-        line-height: 1.5em;
         margin: 0 auto 1.2em auto; 
+        font-weight: 200;
+        line-height: 1.4em;
 
         @include media($large-screen) {
-          font-size: 2.5em;
           max-width: 100%;
-          font-family: 'Lato', "Helvetica", "Arial";
+          font-size: 2.5em;
+          font-family: 'Lato', Helvetica, Arial;
           font-weight: 300;
         }
       }
@@ -466,9 +471,12 @@ header.navigation {
     button {
       @include button(flat, #FFB400);
       padding: 0.7em 2em;
-      font-family: "Helvetica", "Arial";
+      border: 1px solid #E6A200;
+      font-family: Helvetica, Arial;
       font-weight: 300;
+      letter-spacing: 0.5px;
       color: #FFF;
+      
     }
   }
 }
@@ -536,11 +544,11 @@ header.navigation {
 
     @include media($large-screen) {
       @include span-columns(4);
-      background-position: bottom;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-position: 50% 40%;
       border-right: $side-image-border;
+      //*background-position: bottom;*//
+      background-size: 65%;
+      background-position: 50% 40%;
+      background-repeat: no-repeat;
 
     }
   }
@@ -562,11 +570,11 @@ header.navigation {
 
     @include media($large-screen) {
       @include span-columns(4);
-      background-position: bottom;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-position: 50% 40%;
       border-right: $side-image-border;
+      //*background-position: bottom;*//
+      background-size: 65%;
+      background-position: 50% 40%;
+      background-repeat: no-repeat;
 
     }
   }
@@ -586,11 +594,12 @@ header.navigation {
 
     @include media($large-screen) {
       @include span-columns(4);
-      background-position: bottom;
-      background-size: 60%;
-      background-repeat: no-repeat;
-      background-position: 50% 40%;
       border-right: $side-image-border;
+      //*background-position: bottom;*//
+      background-size: 65%;
+      background-position: 50% 40%;
+      background-repeat: no-repeat;
+
     }
   }
 
@@ -609,11 +618,12 @@ header.navigation {
 
     @include media($large-screen) {
       @include span-columns(4);
-      background-position: bottom;
-      background-size: 60%;
-      background-repeat: no-repeat;
-      background-position: 50% 40%;
       border-right: $side-image-border;
+      //*background-position: bottom;*//
+      background-size: 65%;
+      background-position: 50% 40%;
+      background-repeat: no-repeat;
+
     }
   }
 
@@ -632,11 +642,12 @@ header.navigation {
 
     @include media($large-screen) {
       @include span-columns(4);
-      background-position: bottom;
-      background-size: 60%;
-      background-repeat: no-repeat;
-      background-position: 50% 40%; 
       border-right: $side-image-border;
+      //*background-position: bottom;*//
+      background-size: 65%;
+      background-position: 50% 40%;
+      background-repeat: no-repeat; 
+
     }
   }
 
@@ -655,14 +666,14 @@ header.navigation {
 
     @include media($large-screen) {
       @include span-columns(4);
-      background-position: bottom;
-      background-size: 80%;
-      background-repeat: no-repeat;
-      background-position: 50% 40%; 
       border-right: $side-image-border;
+      //*background-position: bottom;*//
+      background-size: 65%;
+      background-position: 50% 40%;
+      background-repeat: no-repeat;
+
     }
   }
-
 
   .side-image-content {
     @include span-columns(12);
@@ -675,19 +686,20 @@ header.navigation {
 
     h1 {
       margin-bottom: 0.9em;
-      font-family: 'Lato', "Helvetica", "Arial";
+      font-family: 'Lato', Helvetica, Arial;
       font-weight: 300;
-      color: #686E6B;
+      color: #0D2C54;
+
     }
 
     h4 {
-      background: #BBB;
-      color: white;
       display: inline-block;
-      font-size: 0.75em;
-      font-weight: 800;
       margin-bottom: 1.3em;
       padding: 3px 8px;
+      background: #BBB;
+      font-size: 0.75em;
+      font-weight: 800;
+      color: white;
       text-transform: uppercase;
     }
 
@@ -695,11 +707,11 @@ header.navigation {
       color: $base-font-color;
       line-height: $base-line-height;
       margin-bottom: 3em;
-      font-family: 'Lato', "Helvetica", "Arial";
-      font-size: 1.2em;
+      font-family: Helvetica, Arial;
+      font-size: 1.3em;
       font-weight: 300;
       line-height: 1.9em;
-      color: #9CA5A0;
+      color: #8696AA;
     }
 
     button {
@@ -713,123 +725,26 @@ header.navigation {
 
 //*CONTENT*//
 
-//*CARDS*//
-
-.cards {
-  @include display(flex);
-  @include flex-wrap(wrap);
-  @include justify-content(space-between);
-  @include outer-container;
-}
-
-.card {
-  $base-border-color: gainsboro !default;
-  $base-border-radius: 3px !default;
-  $base-background-color: white !default;
-  $base-spacing: 1.5em !default;
-  $action-color: #477DCA !default;
-  $base-link-color: $action-color !default;
-  $dark-gray: #333 !default;
-  $base-font-color: $dark-gray !default;
-  $card-border-color: $base-border-color;
-  $card-border: 1px solid $card-border-color;
-  $card-background: lighten($card-border-color, 10%);
-  $card-header-background: $card-background;
-  $card-hover-background: lighten($card-background, 5%);
-  $card-image-background: #DBD199;
-  $card-image-hover-background: lighten($card-image-background, 5%);
-  $card-margin: 1em;
-  margin-bottom: 20px;
-
-  @include flex-basis(15em);
-  @include flex-grow(1);
-  @include transition (all 0.2s ease-in-out);
-  background-color: $card-background;
-  border-radius: $base-border-radius;
-  border: $card-border;
-  box-shadow: 0 2px 4px darken($base-background-color, 10%);
-  cursor: pointer;
-  margin: 0 $card-margin $base-spacing $card-margin;
-  position: relative;
-
-  .card-image {
-    overflow: hidden;
-    max-height: 150px;
-
-    img {
-      @include transition (all 0.2s ease-in-out);
-      background: $card-image-background;
-      border-top-left-radius: $base-border-radius;
-      border-top-right-radius: $base-border-radius;
-      width: 100%;
-    }
-  }
-
-  .card-header {
-    @include transition (all 0.2s ease-in-out);
-    background-color: $card-header-background;
-    border-bottom: $card-border;
-    border-radius: $base-border-radius $base-border-radius 0 0;
-    font-weight: bold;
-    line-height: 1.5em;
-    padding: ($base-spacing / 3) ($base-spacing / 2);
-  }
-
-  .card-copy {
-    font-size: 0.9em;
-    line-height: 1.5em;
-    padding: ($base-spacing / 2) ($base-spacing / 2);
-
-    p {
-      margin: 0 0 ($base-spacing / 2);
-    }
-  }
-  
-  &:focus,
-  &:hover {
-    background-color: $card-hover-background;
-    
-    .card-image img {
-      background: $card-image-hover-background;
-    }
-  
-    .card-header {
-      background-color: $card-hover-background;
-    }
-  }
-
-  &:active {
-    background-color: $card-background;
-
-    .card-header {
-      background-color: $card-background;
-    }
-  }
-}
-
-//*CARDS*//
-
-
 //*FORM*//
 
-form {	
-	background: #FFB400;
-	border-top: 0px solid #EAEAEA;
-	border-bottom: 0px solid #EAEAEA;
-	padding: 1.5em;
-	display: block;
-	@include outer-container;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+form {
+  display: block;
+  padding: 1.5em;
+  background-color: #00B4FF;
+  background-image: url("../images/CubesPattern.png");
+  background-repeat: repeat;  
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  @include outer-container;
 
 }
 
 form p {
-    margin-bottom: 1em;
-    font-family: 'Lato' "Helvetica", "Arial";
-    font-size: 2.2em;
+    margin-bottom: 0.8em;
+    font-family: 'Lato', Helvetica, Arial;
+    font-size: 2.3em;
     font-weight: 300;
-    line-height: 1.4em;
+    line-height: 1.5em;
     color: #FFF;
     @include span-columns(8);
     @include shift(2);
@@ -837,19 +752,18 @@ form p {
 }
 
 u {
-    text-decoration: none;
-    border-bottom: 1px solid #FFF;
+    display: inline-block;
+    text-decoration: none; 
     padding-bottom: 0.1px;
-    display: inline-block; 
+    border-bottom: 0px solid #FFF;
 
 }
 
 label {
 	display: block;
-	font-family: "Helvetica", "Arial";
+	font-family: Helvetica, Arial;
 	font-size: 1.1em;
 	font-weight: 300;
-	color: #BCBCBC;
 	@include span-columns(8);
     @include shift(2);
 
@@ -857,33 +771,38 @@ label {
 
 input {
 	display: block;
-	font-family: "Helvetica", "Arial";
+  background: #FFF;
+  padding-top: 0.7em;
+  padding-right: 0.5em;
+  padding-left: 1em;
+  padding-bottom: 0.7em;
+  margin-top: 0.4em;
+  margin-bottom: 1.4em;
+	font-family: Helvetica, Arial;
 	font-size: 1em;
 	font-weight: 300;
-	color: #BCBCBC;
-	padding-top: 0.7em;
-	padding-right: 0.5em;
-	padding-left: 1em;
-	padding-bottom: 0.7em;
-	border: 1px solid #FFB400;
+	color: #4A4A4A;
+	border: 1px solid #00B4FF;
   border-radius: 2px;
-  margin-top: 0.4em;
-	margin-bottom: 1.4em;
 	width: 100%;
 	@include span-columns(8);
     @include shift(2);
+
 }
 
 form button {
-	@include button(flat, #00B4FF);
+	@include button(flat, #FFB400);
     padding: 0.75em 2em;
     margin-top: 2em;
     margin-bottom: 2em;
-    font-family: "Helvetica", "Arial";
+    font-family: Helvetica, Arial;
     font-weight: 300;
     color: #FFF;
+    letter-spacing: 0.5px;
+    border: 1px solid #E6A200;
     @include span-columns(2);
     @include shift(5);
+
 }
 
 //*FORM*//
@@ -899,6 +818,7 @@ form button {
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, 0.6);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
+  \-background-image: url(../images/Pattern.png);
 
   background: $footer-background;
   padding: ($base-spacing * 2) $gutter;
@@ -963,6 +883,7 @@ form button {
     font-size: 1em;
     font-weight: 800;
     margin-bottom: 0.4em;
+
   }  
 
   hr {
@@ -972,13 +893,19 @@ form button {
 
   }
 
+  i {
+  margin: 0px 10px 0px 10px;
+  padding: 10px;
+
+  }
+
   p {
     color: $footer-disclaimer-color;
+    max-width: 35em;
     font-size: 0.9em;
+    text-align: center;
     line-height: 1.5em;
     margin: auto;
-    max-width: 35em;
-    text-align: center;
 
   }
 }
